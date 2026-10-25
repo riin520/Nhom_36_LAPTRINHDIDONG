@@ -9,7 +9,7 @@ app.use(express.json());
 app.get("/health", (req, res) => {
   res
     .status(200)
-    .json({ status: "Healthy", message: "Neko Coffee Backend is running!" });
+    .json({ status: "Healthy", message: "DOAN_NHOM_36 Backend is running!" });
 });
 
 const PORT = process.env.PORT || 3000;
