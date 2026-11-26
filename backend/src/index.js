@@ -5,6 +5,9 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use("/auth", require("./routes/auth"));
+app.use("/mon", require("./routes/thuc-don"));
+app.use("/ban", require("./routes/ban"));
 
 // Đây là endpoint bắt buộc để Render kiểm tra sức khỏe hệ thống
 app.get("/health", (req, res) => {
