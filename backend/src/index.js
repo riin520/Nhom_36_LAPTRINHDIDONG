@@ -9,6 +9,13 @@ app.use("/auth", require("./routes/auth"));
 app.use("/mon", require("./routes/thuc-don"));
 app.use("/ban", require("./routes/ban"));
 
+app.get("/", (req, res) => {
+  res.json({
+    ten: "Nhom 36 - Backend quan ly chuoi quan ca phe",
+    thu_ngay: ["/health", "/mon?chiNhanh=1"],
+    tai_lieu: "docs/api-contract.md trong repo",
+  });
+});
 // Đây là endpoint bắt buộc để Render kiểm tra sức khỏe hệ thống
 app.get("/health", (req, res) => {
   res
